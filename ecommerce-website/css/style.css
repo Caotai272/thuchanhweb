@@ -1,0 +1,408 @@
+/* Cart */
+.cart {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.cart-header {
+    display: grid;
+    grid-template-columns: 100px 2fr 1fr 1fr 1fr;
+    padding: 1rem;
+    background: #f5f5f5;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 100px 2fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-total {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+/* Giữ nguyên các phần khác của style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: rgba(162, 162, 162, 0.871);
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    background: #555;
+}
+
+/* Banners */
+.banners {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.banner-left, .banner-right {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    pointer-events: auto;
+}
+
+.banner-left img, .banner-right img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-left {
+    left: 10px;
+}
+
+.banner-right {
+    right: 10px;
+}
+
+/* Main */
+main {
+    flex: 1;
+    padding: 2rem;
+    margin: 0 140px; /* Khoảng cách để tránh banner */
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/hero_background.jpg') no-repeat center center/cover;
+    background-color: #302c2c; /* Màu dự phòng nếu hình không tải được */
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Lớp phủ tối để chữ dễ đọc */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background: #e60000;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: #cc0000;
+}
+
+/* Carousel Section */
+/* Carousel Section */
+.carousel {
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    width: calc(300px * 10); /* Chiều rộng của 10 hình ảnh (5 gốc + 5 nhân đôi) */
+    animation: slide 20s infinite linear; /* Tăng thời gian để phù hợp với số lượng hình ảnh */
+}
+
+.carousel-slide img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 1rem;
+    border-radius: 5px;
+    flex-shrink: 0; /* Ngăn hình ảnh co lại */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Dịch chuyển 50% chiều rộng (tương ứng 5 hình ảnh) */
+    }
+}
+
+/* About Section */
+.about {
+    margin-bottom: 2rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.about-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Featured Products */
+.featured-products {
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin: 0.5rem 0;
+}
+
+.product p {
+    color: #555;
+}
+
+/* Reviews Section */
+.reviews {
+    margin-bottom: 2rem;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.review-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.review-item p {
+    margin-bottom: 0.5rem;
+}
+
+.review-item span {
+    font-style: italic;
+    color: #555;
+}
+
+/* Services Section */
+.services {
+    margin-bottom: 2rem;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.service-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.service-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Promotions Section */
+.promotions {
+    margin-bottom: 2rem;
+}
+
+.promotion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.promotion-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.promotion-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Stores Section */
+.stores {
+    margin-bottom: 2rem;
+}
+
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.store-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.store-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact input, .contact textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}

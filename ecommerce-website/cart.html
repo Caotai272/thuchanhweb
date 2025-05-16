@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - Saigon Motorcycles</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">SAIGON MOTORCYCLES</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="products.html">Sản Phẩm</a></li>
+                <li><a href="cart.html">Giỏ Hàng</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Quảng Cáo -->
+    <div class="banners">
+        <div class="banner-left">
+            <img src="images/banner-left.jpg" alt="Banner Left">
+        </div>
+        <div class="banner-right">
+            <img src="images/banner-right.jpg" alt="Banner Right">
+        </div>
+    </div>
+
+    <!-- Giỏ hàng -->
+    <main>
+        <section class="cart">
+            <h1>Giỏ Hàng</h1>
+            <div class="cart-table">
+                <div class="cart-header">
+                    <span>Hình Ảnh</span>
+                    <span>Sản Phẩm</span>
+                    <span>Số Lượng</span>
+                    <span>Giá</span>
+                    <span>Thao Tác</span>
+                </div>
+                <div id="cart-items"></div>
+            </div>
+            <div class="cart-total">
+                <h3>Tổng cộng: <span id="cart-total">0 VNĐ</span></h3>
+                <button class="btn" onclick="checkout()">Thanh Toán</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Saigon Motorcycles. All rights reserved.</p>
+        <p>Liên hệ: info@saigonmotorcycles.com | Hotline: 0909 287 853</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
